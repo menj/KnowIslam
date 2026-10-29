@@ -23,6 +23,11 @@ class SkinKnowIslam extends SkinMustache {
 		$data['ki-random-url'] = SpecialPage::getTitleFor( 'Randompage' )->getLocalURL();
 		$data['is-mainpage'] = $isMain;
 
+		// The site's own logo from $wgLogos / $wgLogo: icon first, then svg, 2x, 1x.
+		$logos = $data['data-logos'] ?? [];
+		$logo = $logos['icon'] ?? $logos['svg'] ?? $logos['2x'] ?? $logos['1x'] ?? null;
+		$data['ki-logo-url'] = is_string( $logo ) ? $logo : null;
+
 		if ( $isMain ) {
 			$search = SpecialPage::getTitleFor( 'Search' );
 			$topics = [];

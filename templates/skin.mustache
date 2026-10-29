@@ -12,7 +12,7 @@
 					{{/data-portlets-sidebar}}
 				</div>
 			</details>
-			<a class="ki-brand" href="{{link-mainpage}}"><span class="ki-brand-mark" aria-hidden="true">✺</span><span class="ki-brand-name">{{msg-sitetitle}}<small>{{msg-knowislam-tagline}}</small></span></a>
+			<a class="ki-brand" href="{{link-mainpage}}">{{#ki-logo-url}}<img class="ki-brand-logo" src="{{ki-logo-url}}" alt="" width="44" height="44">{{/ki-logo-url}}<span class="ki-brand-name">{{msg-sitetitle}}<small>{{msg-knowislam-tagline}}</small></span></a>
 			{{#data-search-box}}
 			<form class="ki-search" action="{{form-action}}" role="search">
 				<input type="hidden" name="title" value="Special:Search">
@@ -62,7 +62,7 @@
 				</form>
 				<div class="ki-landing__quick"><span>{{msg-knowislam-hero-quick}}</span><a href="{{ki-allpages-url}}">{{msg-knowislam-allpages}} ↗</a><a href="{{ki-random-url}}">{{msg-knowislam-random}} ↗</a></div>
 			</div>
-			<div class="ki-landing__art" aria-hidden="true"><div class="ki-landing__arch"><div class="ki-landing__star">✺</div></div></div>
+			{{#ki-logo-url}}<div class="ki-landing__art" aria-hidden="true"><div class="ki-landing__arch"><img class="ki-landing__logo" src="{{ki-logo-url}}" alt=""></div></div>{{/ki-logo-url}}
 		</div>
 		{{#has-ki-topics}}
 		<div class="ki-landing__topics">

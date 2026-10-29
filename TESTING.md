@@ -21,7 +21,8 @@ Rendered on MediaWiki 1.43 (SkinMustache API as in 1.40) with Cite and ParserFun
 - Hero search, overlay search and topic cards reach Special:Search.
 - Landing section present only on Main Page view; absent on articles and on Main Page edit.
 - No JavaScript errors.
+- Site logo from `$wgLogos` shown in header and hero.
 
 Still to test on the 1.40 server: `/topic/` article path, Scribunto-based templates, Math, uploaded images and page caching.
 
-This is a development build, not a live-tested release. The geometric brand mark is a placeholder until the official logo is available in a deployable asset.
+This is a development build, not a live-tested release.

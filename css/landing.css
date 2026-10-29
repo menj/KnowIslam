@@ -3,7 +3,7 @@
 .ki-brand { display:flex; align-items:center; gap:.65rem; line-height:1.1; }
 .ki-brand-name { display:block; }
 .ki-brand small { display:block; margin-top:.3rem; font:600 .53rem/1.2 var(--ki-sans); letter-spacing:.14em; text-transform:uppercase; color:var(--ki-muted); }
-.ki-brand-mark { display:grid; place-items:center; width:2.5rem; height:2.5rem; border:1px solid var(--ki-accent); border-radius:50%; color:var(--ki-accent); font-size:1.8rem; }
+.ki-brand-logo { display:block; width:2.75rem; height:2.75rem; object-fit:contain; flex:none; }
 body.ki-home .ki-main { padding-top:0; }
 .ki-landing__hero { position:relative; overflow:hidden; display:grid; grid-template-columns:1.2fr .8fr; min-height:590px; background:#10273a; color:#fffaf0; isolation:isolate; }
 .ki-landing__hero::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 75% 35%,rgba(199,154,83,.24),transparent 37%),repeating-linear-gradient(45deg,transparent 0 28px,rgba(245,210,158,.035) 29px 30px); z-index:-1; }
@@ -22,7 +22,7 @@ body.ki-home .ki-main { padding-top:0; }
 .ki-landing__art { display:grid; place-items:center; padding:3rem; overflow:hidden; }
 .ki-landing__arch { position:relative; display:grid; place-items:center; width:min(100%,380px); aspect-ratio:3/4.4; border:2px solid #c59b5a; border-radius:49% 49% 4px 4px / 32% 32% 4px 4px; box-shadow:0 0 0 12px #10273a,0 0 0 14px #906d3b,0 0 0 34px #10273a,0 0 0 35px #725d40,inset 0 0 100px #c5a66b33; background:radial-gradient(ellipse at center,#35536a,#0c2337 72%); }
 .ki-landing__arch::after {content:''; position:absolute; inset:14%; border:1px solid #caa46f55; border-radius:49% 49% 3px 3px / 32% 32% 3px 3px;}
-.ki-landing__star { color:#e4bb7a; font-size:clamp(8rem,19vw,17rem); text-shadow:0 0 40px #ba985677; }
+.ki-landing__logo { position:relative; z-index:1; width:72%; height:auto; object-fit:contain; filter:drop-shadow(0 0 40px #ba985666); }
 .ki-landing__topics { max-width:1220px; margin:0 auto; padding:4.5rem 1.5rem 5rem; }
 .ki-landing__heading { display:flex; align-items:end; justify-content:space-between; gap:1rem; margin-bottom:1.8rem; }
 .ki-landing__heading .ki-kicker { color:var(--ki-accent); }
@@ -55,6 +55,7 @@ html.ki-overlay-open { overflow:hidden; }
 	.ki-header .ki-search { display:none; }
 	.ki-search-open:not([hidden]) { display:inline-grid; margin-left:auto; }
 	.ki-brand small { display:none; }
-	.ki-brand-mark { width:2rem; height:2rem; font-size:1.4rem; }
+	.ki-brand-logo { width:2.25rem; height:2.25rem; }
 }
 body.ki-home .ki-tabs { margin-top:1.5rem; }
+.ki-landing__hero:not(:has(.ki-landing__art)) { grid-template-columns:1fr; }

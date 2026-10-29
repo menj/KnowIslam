@@ -38,6 +38,10 @@ $wgKnowIslamCustomColors = [
 
 Visitors who are not logged in change scheme with the header button; the choice is stored in their browser and applied before first paint. Logged-in users' choice is saved to their preferences.
 
+## Logo
+
+The header and the landing hero use the site's existing logo as configured in `$wgLogos` (or `$wgLogo`): the `icon` entry first, then `svg`, `2x`, `1x`. The skin ships no logo of its own. If no logo is configured, the header shows the site name only and the hero art is omitted.
+
 ## Homepage and deployment notes
 
 The landing section is rendered only when viewing the main page (not when editing it or viewing its history). The Main Page wikitext still renders below it; edit the Main Page to complement the landing section.
@@ -51,11 +55,13 @@ All landing text is in interface messages and can be edited on-wiki without touc
 
 Search forms submit to `$wgScript` with `title=Special:Search`, so they work with any article path.
 
-Validate on staging before switching the live default skin. Check the exact MediaWiki version, site logo, private extensions, search URLs, user menus, edit/history links, skin preferences, and page cache behavior. The decorative geometric mark is a placeholder and does not replace any existing uploaded official logo.
+Validate on staging before switching the live default skin. Check the exact MediaWiki version, site logo, private extensions, search URLs, user menus, edit/history links, skin preferences, and page cache behavior.
 
 ## Changelog
 
 ### 1.2.0
+- Changed: the header and hero use the site's existing logo from `$wgLogos`; the placeholder ✺ mark is removed.
+
 Merges the editorial build (landing page, search overlay) with the 1.1.0 fixes.
 
 - Fixed: `templateDirectory` is relative to the skin. The old path only worked on 1.40 through a deprecated fallback and fails on 1.41+.
