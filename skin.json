@@ -1,0 +1,37 @@
+{
+  "name": "KnowIslam",
+  "version": "0.1.0",
+  "author": ["KnowIslam contributors"],
+  "url": "https://github.com/menj/KnowIslam",
+  "descriptionmsg": "knowislam-desc",
+  "namemsg": "skinname-knowislam",
+  "license-name": "GPL-3.0-or-later",
+  "type": "skin",
+  "requires": {"MediaWiki": ">= 1.39"},
+  "ValidSkinNames": {
+    "knowislam": {
+      "class": "SkinMustache",
+      "args": [{
+        "name": "knowislam",
+        "responsive": true,
+        "templateDirectory": "skins/KnowIslam/templates",
+        "template": "skin",
+        "styles": ["skins.knowislam"],
+        "scripts": ["skins.knowislam.scripts"],
+        "messages": ["sitetitle", "search", "navigation-heading"],
+        "menus": ["user-page", "user-menu", "views", "actions", "languages", "notifications", "associated-pages", "variants", "footer-info", "footer-places", "footer-icons"]
+      }]
+    }
+  },
+  "MessagesDirs": {"KnowIslam": ["i18n"]},
+  "ResourceModules": {
+    "skins.knowislam": {
+      "class": "MediaWiki\\ResourceLoader\\SkinModule",
+      "features": {"normalize": true, "elements": true, "content-links": true, "content-media": true, "content-tables": true, "interface-category": true, "toc": true},
+      "styles": ["resources/skin.css"]
+    },
+    "skins.knowislam.scripts": {"scripts": ["resources/skin.js"]}
+  },
+  "ResourceFileModulePaths": {"localBasePath": "", "remoteSkinPath": "KnowIslam"},
+  "manifest_version": 2
+}
