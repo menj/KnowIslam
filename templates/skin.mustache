@@ -1,65 +1,109 @@
-<a class="ki-skip" href="#mw-content-text">Skip to content</a>
+{{{html-headelement}}}
+<a class="ki-skip" href="#content">{{msg-knowislam-skip}}</a>
 <div class="ki-site">
-  <header class="ki-header" role="banner">
-    <div class="ki-header-inner">
-      <a class="ki-brand" href="{{link-mainpage}}" aria-label="KnowIslam home">
-        {{#data-logos}}{{#icon}}<img class="ki-logo" src="{{.}}" alt="" width="42" height="42">{{/icon}}{{/data-logos}}
-        <span class="ki-brand-name">Know<span>Islam</span><small>THE KNOWLEDGE ENCYCLOPEDIA</small></span>
-      </a>
-      <nav class="ki-primary" aria-label="Explore">
-        <a href="{{link-mainpage}}">Home</a>
-        <a href="/topic/Islam">Explore Islam</a>
-        <a href="/topic/Special:AllPages">All articles</a>
-        <a href="/topic/Special:Random">Discover</a>
-      </nav>
-      <div class="ki-header-actions">
-        <button class="ki-search-trigger" type="button" aria-label="Open search" aria-controls="ki-search-dialog" aria-expanded="false"><span aria-hidden="true">⌕</span><span class="ki-desktop-label">Search</span></button>
-        <button class="ki-menu-trigger" type="button" aria-label="Open navigation" aria-controls="ki-mobile-navigation" aria-expanded="false"><span aria-hidden="true">☰</span></button>
-      </div>
-    </div>
-    <nav id="ki-mobile-navigation" class="ki-mobile-nav" aria-label="Mobile navigation" hidden>
-      <a href="{{link-mainpage}}">Home</a><a href="/topic/Islam">Explore Islam</a><a href="/topic/Special:AllPages">All articles</a><a href="/topic/Special:Random">Discover</a>
-    </nav>
-  </header>
-  <div id="ki-search-dialog" class="ki-search-dialog" role="dialog" aria-modal="true" aria-label="Search KnowIslam" hidden>
-    <div class="ki-search-panel"><button type="button" class="ki-search-close" aria-label="Close search">×</button>
-      <p class="ki-eyebrow">KNOWISLAM · SEARCH THE ENCYCLOPEDIA</p>
-      <form action="{{link-search}}" method="get" role="search">
-        <label for="ki-search-input">What would you like to discover?</label>
-        <div class="ki-search-fields"><input id="ki-search-input" type="search" name="search" placeholder="Search beliefs, history, people and ideas…" required><button type="submit">Search →</button></div>
-      </form><p class="ki-search-tip">Press Esc to close</p>
-    </div>
-  </div>
-  <main id="content" class="ki-main">
-    <section class="ki-home-hero" aria-label="Discover KnowIslam">
-      <div class="ki-hero-ornament" aria-hidden="true"></div>
-      <div class="ki-hero-inner">
-        <p class="ki-eyebrow">A LIVING ENCYCLOPEDIA OF ISLAM</p>
-        <h1>Discover the depth of <em>Islamic knowledge.</em></h1>
-        <p class="ki-hero-subtitle">Explore faith, history, scripture, ideas and the people who shaped a civilisation.</p>
-        <form class="ki-hero-search" action="{{link-search}}" method="get" role="search"><label class="ki-sr-only" for="ki-hero-query">Search articles</label><input id="ki-hero-query" type="search" name="search" placeholder="What would you like to know?" required><button type="submit" aria-label="Search articles">Explore →</button></form>
-        <div class="ki-hero-links"><span>START EXPLORING</span><a href="/topic/Islam">Islam <span aria-hidden="true">↗</span></a><a href="/topic/Quran">Qur’an <span aria-hidden="true">↗</span></a><a href="/topic/Islamic_History">History <span aria-hidden="true">↗</span></a></div>
-      </div>
-    </section>
-    <section class="ki-home-directory" aria-label="Knowledge paths">
-      <div class="ki-section-heading"><div><p class="ki-eyebrow">CURATED PATHWAYS</p><h2>Begin your exploration</h2></div><a href="/topic/Special:AllPages">Browse the encyclopedia <span aria-hidden="true">↗</span></a></div>
-      <div class="ki-topic-grid">
-        <a href="/topic/Islam" class="ki-topic"><span class="ki-topic-index">01 / FOUNDATIONS</span><span class="ki-topic-icon" aria-hidden="true">✦</span><strong>Faith & Belief</strong><span>Explore the foundations of Islamic faith.</span><span class="ki-topic-arrow" aria-hidden="true">↗</span></a>
-        <a href="/topic/Quran" class="ki-topic"><span class="ki-topic-index">02 / REVELATION</span><span class="ki-topic-icon" aria-hidden="true">۞</span><strong>Qur’an & Scripture</strong><span>Encounter the texts and their interpretations.</span><span class="ki-topic-arrow" aria-hidden="true">↗</span></a>
-        <a href="/topic/Islamic_History" class="ki-topic"><span class="ki-topic-index">03 / CIVILISATION</span><span class="ki-topic-icon" aria-hidden="true">⌁</span><strong>History & Heritage</strong><span>Trace centuries of people, places and ideas.</span><span class="ki-topic-arrow" aria-hidden="true">↗</span></a>
-        <a href="/topic/Islamic_Jurisprudence" class="ki-topic"><span class="ki-topic-index">04 / TRADITION</span><span class="ki-topic-icon" aria-hidden="true">✧</span><strong>Law & Practice</strong><span>Understand Islamic ethics and daily life.</span><span class="ki-topic-arrow" aria-hidden="true">↗</span></a>
-      </div>
-    </section>
-    <div class="ki-article-shell">
-      <div class="ki-article-topline"><span class="ki-eyebrow">KNOWISLAM / ENCYCLOPEDIA</span><div class="ki-page-actions">{{#data-portlets}}{{#data-views}}{{>Menu}}{{/data-views}}{{#data-actions}}{{>Menu}}{{/data-actions}}{{/data-portlets}}</div></div>
-      <div class="ki-article-layout">
-        <article class="ki-article">
-          <header class="ki-article-heading"><h1 id="firstHeading">{{{html-title}}}</h1>{{#html-subtitle}}<div class="ki-subtitle">{{{html-subtitle}}}</div>{{/html-subtitle}}</header>
-          <div id="bodyContent"><div id="mw-content-text" class="mw-body-content">{{{html-body-content}}}</div>{{{html-categories}}}</div>
-        </article>
-        <aside class="ki-aside" aria-label="Wiki tools"><div class="ki-aside-sticky"><p class="ki-eyebrow">TOOLS & COMMUNITY</p>{{#data-portlets}}{{#data-user-page}}{{>Menu}}{{/data-user-page}}{{#data-user-menu}}{{>Menu}}{{/data-user-menu}}{{#data-languages}}{{>Menu}}{{/data-languages}}{{/data-portlets}}<a class="ki-aside-discover" href="/topic/Special:Random">Discover another article <span aria-hidden="true">↗</span></a></div></aside>
-      </div>
-    </div>
-  </main>
-  <footer class="ki-footer"><div class="ki-footer-inner"><div><strong>Know<span>Islam</span></strong><p>Exploring knowledge, illuminating understanding.</p></div><div><a href="/topic/Special:RecentChanges">Recent changes</a><a href="/topic/Special:AllPages">All pages</a><a href="/topic/Special:SpecialPages">Wiki tools</a></div></div><div class="ki-footer-meta">Content licensing and attribution are governed by the wiki's applicable license and individual page notices. <span>Built with MediaWiki.</span></div>{{{html-footer}}}</footer>
+	<header class="ki-header">
+		<div class="ki-header__inner">
+			<details class="ki-menu">
+				<summary class="ki-iconbtn" aria-label="{{msg-knowislam-menu}}" title="{{msg-knowislam-menu}}"><span class="ki-burger"></span></summary>
+				<div class="ki-menu__panel">
+					{{#data-portlets-sidebar}}
+						{{#data-portlets-first}}{{>Portlet}}{{/data-portlets-first}}
+						{{#array-portlets-rest}}{{>Portlet}}{{/array-portlets-rest}}
+					{{/data-portlets-sidebar}}
+				</div>
+			</details>
+			<a class="ki-brand" href="{{link-mainpage}}"><span class="ki-brand-mark" aria-hidden="true">✺</span><span class="ki-brand-name">{{msg-sitetitle}}<small>{{msg-knowislam-tagline}}</small></span></a>
+			{{#data-search-box}}
+			<form class="ki-search" action="{{form-action}}" role="search">
+				<input type="hidden" name="title" value="Special:Search">
+				{{{html-input}}}
+				{{{html-button-search-fallback}}}
+				{{{html-button-search}}}
+			</form>
+			{{/data-search-box}}
+			<button class="ki-iconbtn ki-search-open" type="button" aria-label="{{msg-knowislam-search-open}}" title="{{msg-knowislam-search-open}}" aria-expanded="false" aria-controls="ki-search-overlay" hidden>
+				<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m13 13 4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+			</button>
+			<button class="ki-iconbtn ki-scheme-toggle" type="button" hidden></button>
+			<details class="ki-menu ki-user">
+				<summary class="ki-iconbtn" aria-label="{{msg-knowislam-user-menu}}" title="{{msg-knowislam-user-menu}}">
+					<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="6.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 17.5c.8-3.3 3.4-5 6.5-5s5.7 1.7 6.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+				</summary>
+				<div class="ki-menu__panel ki-menu__panel--end">
+					{{#data-portlets}}{{#data-personal}}{{>Portlet}}{{/data-personal}}{{/data-portlets}}
+				</div>
+			</details>
+		</div>
+	</header>
+	<div class="ki-search-overlay" id="ki-search-overlay" role="dialog" aria-modal="true" aria-labelledby="ki-search-overlay-title" hidden>
+		<div class="ki-search-overlay__panel">
+			<button class="ki-search-close ki-iconbtn" type="button" aria-label="{{msg-knowislam-search-close}}">×</button>
+			<p class="ki-kicker">{{msg-knowislam-search-kicker}}</p>
+			<h2 id="ki-search-overlay-title">{{msg-knowislam-search-heading}}</h2>
+			<form action="{{ki-search-action}}" role="search">
+				<input type="hidden" name="title" value="Special:Search">
+				<label for="ki-overlay-search">{{msg-knowislam-search-label}}</label>
+				<div class="ki-overlay-form"><input id="ki-overlay-search" name="search" type="search" placeholder="{{msg-knowislam-search-placeholder}}" required><button type="submit">{{msg-knowislam-search-button}}</button></div>
+			</form>
+		</div>
+	</div>
+	{{#is-mainpage}}
+	<section class="ki-landing" aria-labelledby="ki-landing-title">
+		<div class="ki-landing__hero">
+			<div class="ki-landing__content">
+				<p class="ki-kicker">{{msg-knowislam-hero-kicker}}</p>
+				<h1 id="ki-landing-title">{{msg-knowislam-hero-title}} <em>{{msg-knowislam-hero-title-em}}</em></h1>
+				<p>{{msg-knowislam-hero-text}}</p>
+				<form action="{{ki-search-action}}" class="ki-landing__search" role="search">
+					<input type="hidden" name="title" value="Special:Search">
+					<label class="ki-visually-hidden" for="ki-landing-search">{{msg-knowislam-search-label}}</label>
+					<input id="ki-landing-search" type="search" name="search" placeholder="{{msg-knowislam-hero-placeholder}}" required>
+					<button type="submit">{{msg-knowislam-hero-button}}</button>
+				</form>
+				<div class="ki-landing__quick"><span>{{msg-knowislam-hero-quick}}</span><a href="{{ki-allpages-url}}">{{msg-knowislam-allpages}} ↗</a><a href="{{ki-random-url}}">{{msg-knowislam-random}} ↗</a></div>
+			</div>
+			<div class="ki-landing__art" aria-hidden="true"><div class="ki-landing__arch"><div class="ki-landing__star">✺</div></div></div>
+		</div>
+		{{#has-ki-topics}}
+		<div class="ki-landing__topics">
+			<div class="ki-landing__heading"><div><p class="ki-kicker">{{msg-knowislam-topics-kicker}}</p><h2>{{msg-knowislam-topics-heading}}</h2></div><a href="{{ki-allpages-url}}">{{msg-knowislam-allpages}} ↗</a></div>
+			<div class="ki-landing__grid">
+				{{#array-ki-topics}}
+				<a href="{{href}}" class="ki-topic"><span class="ki-topic__number">{{number}}</span><span class="ki-topic__symbol" aria-hidden="true">{{symbol}}</span><strong>{{title}}</strong><span>{{text}}</span><b aria-hidden="true">↗</b></a>
+				{{/array-ki-topics}}
+			</div>
+		</div>
+		{{/has-ki-topics}}
+	</section>
+	{{/is-mainpage}}
+	<main class="ki-main">
+		<article id="content" class="mw-body" role="main">
+			<div class="ki-tabs">
+				{{#data-portlets}}
+					{{#data-namespaces}}{{>Portlet}}{{/data-namespaces}}
+					{{#data-views}}{{>Portlet}}{{/data-views}}
+					{{#data-actions}}{{>Portlet}}{{/data-actions}}
+				{{/data-portlets}}
+			</div>
+			{{{html-sitenotice}}}
+			{{{html-indicators}}}
+			{{^is-mainpage}}{{{html-title-heading}}}{{/is-mainpage}}
+			{{{html-subtitle}}}
+			{{{html-undelete-link}}}
+			{{{html-user-message}}}
+			<div id="bodyContent" class="mw-body-content">
+				{{{html-body-content}}}
+			</div>
+			{{{html-catlinks}}}
+			{{{html-after-content}}}
+		</article>
+	</main>
+	{{#data-footer}}
+	<footer class="ki-footer">
+		{{#data-info}}<ul>{{#array-items}}<li id="{{id}}">{{{html}}}</li>{{/array-items}}</ul>{{/data-info}}
+		{{#data-places}}<ul>{{#array-items}}<li id="{{id}}">{{{html}}}</li>{{/array-items}}</ul>{{/data-places}}
+		{{#data-icons}}<ul class="ki-footer__icons">{{#array-items}}<li id="{{id}}">{{{html}}}</li>{{/array-items}}</ul>{{/data-icons}}
+	</footer>
+	{{/data-footer}}
 </div>
+{{{html-printtail}}}

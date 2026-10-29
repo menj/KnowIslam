@@ -1,37 +1,119 @@
 {
-  "name": "KnowIslam",
-  "version": "0.1.0",
-  "author": ["KnowIslam contributors"],
-  "url": "https://github.com/menj/KnowIslam",
-  "descriptionmsg": "knowislam-desc",
-  "namemsg": "skinname-knowislam",
-  "license-name": "GPL-3.0-or-later",
-  "type": "skin",
-  "requires": {"MediaWiki": ">= 1.39"},
-  "ValidSkinNames": {
-    "knowislam": {
-      "class": "SkinMustache",
-      "args": [{
-        "name": "knowislam",
-        "responsive": true,
-        "templateDirectory": "skins/KnowIslam/templates",
-        "template": "skin",
-        "styles": ["skins.knowislam"],
-        "scripts": ["skins.knowislam.scripts"],
-        "messages": ["sitetitle", "search", "navigation-heading"],
-        "menus": ["user-page", "user-menu", "views", "actions", "languages", "notifications", "associated-pages", "variants", "footer-info", "footer-places", "footer-icons"]
-      }]
-    }
-  },
-  "MessagesDirs": {"KnowIslam": ["i18n"]},
-  "ResourceModules": {
-    "skins.knowislam": {
-      "class": "MediaWiki\\ResourceLoader\\SkinModule",
-      "features": {"normalize": true, "elements": true, "content-links": true, "content-media": true, "content-tables": true, "interface-category": true, "toc": true},
-      "styles": ["resources/skin.css"]
-    },
-    "skins.knowislam.scripts": {"scripts": ["resources/skin.js"]}
-  },
-  "ResourceFileModulePaths": {"localBasePath": "", "remoteSkinPath": "KnowIslam"},
-  "manifest_version": 2
+	"name": "KnowIslam",
+	"namemsg": "skinname-knowislam",
+	"version": "1.2.0",
+	"author": [
+		"Mohd Elfie Nieshaem Juferi"
+	],
+	"url": "https://github.com/menj/KnowIslam",
+	"descriptionmsg": "knowislam-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.39.0"
+	},
+	"manifest_version": 2,
+	"ValidSkinNames": {
+		"knowislam": {
+			"displayname": "Know Islam",
+			"class": "MediaWiki\\Skins\\KnowIslam\\SkinKnowIslam",
+			"args": [
+				{
+					"name": "knowislam",
+					"responsive": true,
+					"templateDirectory": "templates",
+					"styles": [
+						"skins.knowislam.styles"
+					],
+					"scripts": [
+						"skins.knowislam.js"
+					],
+					"messages": [
+						"sitetitle",
+						"knowislam-skip",
+						"knowislam-menu",
+						"knowislam-user-menu",
+						"knowislam-tagline",
+						"knowislam-search-open",
+						"knowislam-search-close",
+						"knowislam-search-kicker",
+						"knowislam-search-heading",
+						"knowislam-search-label",
+						"knowislam-search-placeholder",
+						"knowislam-search-button",
+						"knowislam-hero-kicker",
+						"knowislam-hero-title",
+						"knowislam-hero-title-em",
+						"knowislam-hero-text",
+						"knowislam-hero-placeholder",
+						"knowislam-hero-button",
+						"knowislam-hero-quick",
+						"knowislam-allpages",
+						"knowislam-random",
+						"knowislam-topics-kicker",
+						"knowislam-topics-heading"
+					]
+				}
+			]
+		}
+	},
+	"config": {
+		"KnowIslamCustomColors": {
+			"value": {},
+			"description": "Optional map of CSS variable names (--ki-*) to colour values, applied site-wide."
+		}
+	},
+	"DefaultUserOptions": {
+		"knowislam-scheme": "auto",
+		"knowislam-accent": "emerald",
+		"knowislam-size": "medium",
+		"knowislam-width": "standard"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Skins\\KnowIslam\\": "includes/"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\Skins\\KnowIslam\\Hooks"
+		}
+	},
+	"Hooks": {
+		"GetPreferences": "main",
+		"OutputPageBodyAttributes": "main",
+		"BeforePageDisplay": "main"
+	},
+	"MessagesDirs": {
+		"KnowIslam": [
+			"i18n"
+		]
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "KnowIslam"
+	},
+	"ResourceModules": {
+		"skins.knowislam.styles": {
+			"styles": [
+				"css/themes.css",
+				"css/base.css",
+				"css/components.css",
+				"css/content.css",
+				"css/landing.css"
+			]
+		},
+		"skins.knowislam.js": {
+			"scripts": [
+				"js/theme-toggle.js",
+				"js/menu.js",
+				"js/search-overlay.js"
+			],
+			"messages": [
+				"knowislam-toggle-scheme"
+			],
+			"dependencies": [
+				"mediawiki.api",
+				"mediawiki.user"
+			]
+		}
+	}
 }

@@ -1,0 +1,42 @@
+:root {
+	--ki-fs: 18px;
+	--ki-measure: 44rem;
+	--ki-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--ki-serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Charter, Georgia, serif;
+	--ki-arabic: "Amiri", "Noto Naskh Arabic", "Scheherazade New", "Geeza Pro", serif;
+	--ki-radius: 12px;
+	--ki-gap: 1.5rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 5rem; }
+
+body {
+	margin: 0;
+	background: var(--ki-bg);
+	color: var(--ki-text);
+	font-family: var(--ki-sans);
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+a { color: var(--ki-accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+a.new, a.new:visited { color: var(--ki-new); }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
+	outline: 2px solid var(--ki-accent);
+	outline-offset: 2px;
+}
+
+[lang="ar"], .arabic, [dir="rtl"] { font-family: var(--ki-arabic); line-height: 1.9; }
+
+.ki-skip {
+	position: absolute; left: -999px; top: 0.5rem;
+	background: var(--ki-accent); color: var(--ki-on-accent);
+	padding: 0.5rem 1rem; border-radius: 8px; z-index: 100;
+}
+.ki-skip:focus { left: 0.5rem; }
+
+ul { margin: 0; padding: 0; list-style: none; }
